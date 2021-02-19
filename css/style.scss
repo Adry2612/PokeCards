@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap");
-// Minuto 42
+// Minuto 1:20
 // Lugar de declaración de las variables
-:root {
-  --dark-cyan: hsl(185, 75%, 39%);
-  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
-  --dark-grayish-blue: hsl(227, 10%, 46%);
-  --dark-gray: hsl(0, 0%, 59%);
-}
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
 
 html {
   box-sizing: border-box;
@@ -21,9 +19,10 @@ html {
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
-  background-color: var(--dark-cyan);
+  background-image: url('../images/bg-pattern-top.svg'),
+  url('../images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat, no-repeat;
 }
-
 .flex {
   display: flex;
   /* Alinea los elementos al centro de la pantalla. */
@@ -56,6 +55,43 @@ body {
       border-radius: 100%;
       border: 5px solid white;
       margin-top: calc(-48px - 5px);
+    }
+
+    &-titulo {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+
+      span {
+        color: $dark-gray;
+        /* Definimos el grosor de letra que hemos obtenido anteriormente. */
+        font-weight: 400;
+        margin-left: 0.5rem;
+      }
+    }
+
+    h2 {
+      color: $dark-gray;
+      font-weight: 400;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    
+
+    &-elemento {
+      text-align: center;
+
+      h3{
+        margin-bottom: -0.5rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: $dark-gray;
+      }
     }
   }
 }

@@ -1,12 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap");
-:root {
-  --dark-cyan: hsl(185, 75%, 39%);
-  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
-  --dark-grayish-blue: hsl(227, 10%, 46%);
-  --dark-gray: hsl(0, 0%, 59%);
-}
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,7 +15,8 @@ html {
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
-  background-color: var(--dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
 }
 
 .flex {
@@ -73,5 +67,44 @@ body {
   border-radius: 100%;
   border: 5px solid white;
   margin-top: calc(-48px - 5px);
+}
+
+.tarjeta-cuerpo-titulo {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-cuerpo-titulo span {
+  color: #969696;
+  /* Definimos el grosor de letra que hemos obtenido anteriormente. */
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.tarjeta-cuerpo h2 {
+  color: #969696;
+  font-weight: 400;
+}
+
+.tarjeta-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tarjeta-footer-elemento {
+  text-align: center;
+}
+
+.tarjeta-footer-elemento h3 {
+  margin-bottom: -0.5rem;
+}
+
+.tarjeta-footer-elemento p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #969696;
 }
 /*# sourceMappingURL=style.css.map */
